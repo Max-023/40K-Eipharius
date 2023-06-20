@@ -229,7 +229,7 @@
 	item_state = "kriegmask"
 	armor = list(melee = 15, bullet = 15, laser = 15, energy = 15, bomb = 15, bio = 95, rad = 0)
 	body_parts_covered = FACE|EYES|HEAD
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	unacidable = 1 //acid proof bitch
 
 /obj/item/clothing/mask/gas/krieg/grenadier

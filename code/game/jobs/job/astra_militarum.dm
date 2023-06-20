@@ -66,7 +66,7 @@
 	open_when_dead = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/guardsman
 	alt_titles = list(
-		"Cadian Guardsman" = /decl/hierarchy/outfit/job/guardsman,
+		"Cadian Guardsman" = /decl/hierarchy/outfit/job/guardsman/cadian,
 		"Catachan Jungle Hunter" = /decl/hierarchy/outfit/job/guardsman/catachan,
 		"Krieg Guardsman" = /decl/hierarchy/outfit/job/guardsman/krieg,
 		"Valhallan Ice Warrior" = /decl/hierarchy/outfit/job/guardsman/valhallan,
@@ -543,11 +543,38 @@ datum/job/ig/bullgryn
 
 // Guardsmen
 /decl/hierarchy/outfit/job/guardsman
-	name = OUTFIT_JOB_NAME("Cadian Guardsman")
+	name = OUTFIT_JOB_NAME("Guardsman")
 	uniform = /obj/item/clothing/under/cadian_uniform
 	suit = /obj/item/clothing/suit/armor/guardsman
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = null
+	belt = /obj/item/storage/belt/warfare
+	gloves = /obj/item/clothing/gloves/combat/cadian
+	shoes = /obj/item/clothing/shoes/jackboots/cadian
+	head = /obj/item/clothing/head/helmet/guardhelmet
+	mask = /obj/item/clothing/mask/gas/half/cadianrespirator
+	glasses = /obj/item/clothing/glasses/cadiangoggles
+	l_pocket = /obj/item/storage/box/ifak
+	r_pocket = /obj/item/device/flashlight/lantern
+	suit_store = /obj/item/gun/energy/las/lasgun
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	l_ear = /obj/item/device/radio/headset/red_team
+	backpack_contents = list(
+	/obj/item/cell/lasgun/hotshot = 1,
+	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
+	/obj/item/stack/thrones2 = 1,
+	/obj/item/stack/thrones3/five = 1
+	)
+
+	id_type = /obj/item/card/id/dog_tag/guardsman
+	pda_slot = null
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+
+/decl/hierarchy/outfit/job/guardsman/cadian
+	name = OUTFIT_JOB_NAME("Cadian Guardsman")
+	uniform = /obj/item/clothing/under/cadian_uniform
+	suit = /obj/item/clothing/suit/armor/guardsman/cadian
+	back = /obj/item/storage/backpack/satchel/cadian
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/cadian
 	shoes = /obj/item/clothing/shoes/jackboots/cadian
 	head = /obj/item/clothing/head/helmet/guardhelmet
@@ -575,7 +602,7 @@ datum/job/ig/bullgryn
 	uniform = /obj/item/clothing/under/color/brown
 	suit = /obj/item/clothing/suit/armor/mordian
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = null
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/cadian
 	shoes = /obj/item/clothing/shoes/jackboots/cadian
 	head = /obj/item/clothing/head/helmet/guardhelmet/mordian
@@ -603,6 +630,7 @@ datum/job/ig/bullgryn
 	uniform = /obj/item/clothing/under/rank/krieg_uniform
 	suit = /obj/item/clothing/suit/armor/krieger
 	back = /obj/item/storage/backpack/satchel/krieger
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/krieg
 	shoes = /obj/item/clothing/shoes/jackboots/krieg
 	head = /obj/item/clothing/head/helmet/krieghelmet
@@ -626,7 +654,7 @@ datum/job/ig/bullgryn
 	suit = /obj/item/clothing/suit/armor/catachan
 	head = /obj/item/clothing/head/catachan
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = null
+	belt = /obj/item/storage/belt/warfare
 	gloves = null
 	shoes = /obj/item/clothing/shoes/jackboots/catachan
 	mask = null
@@ -649,7 +677,7 @@ datum/job/ig/bullgryn
 	suit = /obj/item/clothing/suit/armor/valhallanarmor
 	head = /obj/item/clothing/head/valushanka
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = /obj/item/device/flashlight/lantern
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/cadian
 	shoes = /obj/item/clothing/shoes/jackboots/cadian
 	mask = null
@@ -661,7 +689,8 @@ datum/job/ig/bullgryn
 	/obj/item/ammo_magazine/c556/ap = 1,
 	/obj/item/ammo_magazine/c556/ms = 2,
 	/obj/item/stack/thrones2 = 1,
-	/obj/item/stack/thrones3/five = 1
+	/obj/item/stack/thrones3/five = 1,
+	/obj/item/device/flashlight/lantern = 1
 	)
 
 //Karskin
@@ -670,7 +699,7 @@ datum/job/ig/bullgryn
 	uniform = /obj/item/clothing/under/cadian_uniform
 	suit = /obj/item/clothing/suit/armor/kasrkin
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = /obj/item/device/flashlight/lantern
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/cadian
 	shoes = /obj/item/clothing/shoes/jackboots/cadian
 	head = /obj/item/clothing/head/helmet/kasrkin
@@ -686,6 +715,7 @@ datum/job/ig/bullgryn
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
 	/obj/item/stack/thrones = 1,
 	/obj/item/cell/lasgun/hotshot = 3,
+	/obj/item/device/flashlight/lantern = 1
 	)
 
 
@@ -696,7 +726,7 @@ datum/job/ig/bullgryn
 	uniform = /obj/item/clothing/under/cadian_uniform
 	suit = /obj/item/clothing/suit/armor/guardsman
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = null
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/cadian
 	shoes = /obj/item/clothing/shoes/jackboots/cadian
 	head = /obj/item/clothing/head/helmet/guardhelmet
@@ -723,7 +753,7 @@ datum/job/ig/bullgryn
 	uniform = /obj/item/clothing/under/rank/valhallan_uniform
 	suit = /obj/item/clothing/suit/armor/valhallanarmor
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = /obj/item/device/flashlight/lantern
+	belt = /obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/cadian
 	shoes = /obj/item/clothing/shoes/jackboots/cadian
 	head = /obj/item/clothing/head/valushanka
@@ -739,6 +769,7 @@ datum/job/ig/bullgryn
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
 	/obj/item/stack/thrones2 = 1,
 	/obj/item/stack/thrones3/five = 1,
+	/obj/item/device/flashlight/lantern = 1
 	)
 
 /decl/hierarchy/outfit/job/sharpshooter/krieg
@@ -746,7 +777,7 @@ datum/job/ig/bullgryn
 	uniform = /obj/item/clothing/under/rank/krieg_uniform
 	suit = /obj/item/clothing/suit/armor/krieger/grenadier
 	back = /obj/item/storage/backpack/satchel/krieger/grenadier
-	belt = 	/obj/item/pickaxe
+	belt = 	/obj/item/storage/belt/warfare
 	gloves = /obj/item/clothing/gloves/combat/krieg/grenadier
 	shoes = /obj/item/clothing/shoes/jackboots/krieg/grenadier
 	head = /obj/item/clothing/head/helmet/krieghelmet/grenadier
@@ -762,7 +793,8 @@ datum/job/ig/bullgryn
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
 	/obj/item/stack/thrones2 = 1,
 	/obj/item/stack/thrones3/five = 1,
-	/obj/item/shovel/krieg = 1
+	/obj/item/shovel/krieg = 1,
+	/obj/item/pickaxe = 1
 	)
 
 /decl/hierarchy/outfit/job/sharpshooter/catachan
@@ -771,7 +803,7 @@ datum/job/ig/bullgryn
 	suit = /obj/item/clothing/suit/armor/catachan/flamerspecialist
 	head = /obj/item/clothing/head/catachan
 	back = /obj/item/storage/backpack/satchel/warfare
-	belt = /obj/item/extinguisher
+	belt = /obj/item/storage/belt/warfare
 	gloves = null
 	shoes = /obj/item/clothing/shoes/jackboots/catachan
 	mask = null
@@ -785,7 +817,8 @@ datum/job/ig/bullgryn
 	/obj/item/ammo_magazine/flamer = 3,
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
 	/obj/item/stack/thrones2 = 1,
-	/obj/item/stack/thrones3/five = 1
+	/obj/item/stack/thrones3/five = 1,
+	/obj/item/extinguisher = 1
 	)
 
 

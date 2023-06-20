@@ -445,6 +445,11 @@
 	desc = "Holds more than a satchel, but can't open it on your back."
 	icon_state = "warfare_backpack"
 
+/obj/item/storage/backpack/satchel/cadian
+	desc = "Field ready kit, tried and tested through countless encounters."
+	icon_state = "cadpack"
+	item_state = "cadpack"
+
 /obj/item/storage/backpack/satchel/krieger
 	desc = "Field ready kit, tried and tested through countless encounters."
 	icon_state = "kriegpack"

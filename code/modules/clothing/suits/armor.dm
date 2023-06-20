@@ -674,14 +674,20 @@ obj/item/clothing/suit/armor
 /obj/item/clothing/suit/armor/guardsman
 	name = "Cadian Pattern Flak Armour - Medium"
 	desc = "The standard armour found throughout the Cadian-oriented PDF and Cadian Regiments, It is so common that it became symbol of the Astra Militarum as a whole. This one is in it standard configuration."
-	icon_state = "farmor"
-	item_state = "farmor"
+	icon_state = "cadarmor"
+	item_state = "cadarmor"
 	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
 	armor = list(melee = 42, bullet = 48, laser = 42, energy = 20, bomb = 30, bio = 10, rad = 20)
 	sales_price = 20
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/suit/armor/guardsman/cadian
+	name = "Cadian Pattern Flak Armour - Medium"
+	desc = "The standard armour found throughout the Cadian-oriented PDF and Cadian Regiments, It is so common that it became symbol of the Astra Militarum as a whole. This one is in its Cadian configuration, with additional plates to protect the lower torso."
+	icon_state = "fharmor"
+	item_state = "fharmor"
 
 /obj/item/clothing/suit/armor/guardsman/mechanicus
 	name = "Cadian Pattern Flak Armour - Medium(M)"
@@ -697,11 +703,17 @@ obj/item/clothing/suit/armor
 
 /obj/item/clothing/suit/armor/guardsman/carapace
 	name = "Cadian Pattern Flak Armour - Carapace"
-	desc = "The standard armour found throughout the Cadian-oriented PDF and Cadian Regiments, It is so common that it became symbol of the Astra Militarum as a whole. this one is padded with Carapace plates, giving it better protection than average Flak Armour."
-	icon_state = "fharmor"
+	desc = "The standard armour found throughout the Cadian-oriented PDF and Cadian Regiments, It is so common that it became symbol of the Astra Militarum as a whole."
+	icon_state = "fhamor"
 	item_state = "fharmor"
 	armor = list(melee = 48, bullet = 58, laser = 48, energy = 30, bomb = 40, bio = 10, rad = 20)
 	sales_price = 35
+
+/obj/item/clothing/suit/armor/guardsman/carapace/cadian
+	name = "Cadian Pattern Flak Armour - Carapace"
+	desc = "The standard armour found throughout the Cadian-oriented PDF and Cadian Regiments, It is so common that it became symbol of the Astra Militarum as a whole."
+	icon_state = "fharmor"
+	item_state = "fharmor"
 
 /obj/item/clothing/suit/armor/guardsman/carapace/New()
 	..()
